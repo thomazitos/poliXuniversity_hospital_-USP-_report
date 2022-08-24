@@ -1,18 +1,23 @@
-\documentclass[../poliXuniversity_hospital_-USP-report.tex]{subfiles}
+\documentclass[../poliXuniversity_hospital_(USP)_report.tex]{subfiles}
 \graphicspath{ {images/}{../images/} } 
 
 \begin{document}
 \chapter{Arquitetura do Projeto}
 
-O projeto da  robô hospitalar, desde a seus primórdios, tem uma arquitetura de projeto dividida em grandes três áreas de atuação, Sistemas Mecânicos, Eletrônicos e Computacionais. Para essa segunda versão do robô hospitalar, a sua estrutura de organização foi mantida, dessa forma, cada uma das áreas têm seus respectivos objetivos, funções e deveres para o projeto como um todo. Por mais que tenha essa divisão, os membros da equipe, que cursam entre engenharia elétrica, mecânica e mecatrônico, sempre acabam atuando em mais de uma área, o que contribui para a dinamicidade do projeto.
+Tanto a Hema Bot, quanto o Golgi Bot e Ciclo Êrgometro seguem a mesma estrutura, que é composta por três núcleos. O Eletrônico, Mecânico e Computacional, cada um responsável pelo desenvolvimento de cada subsistema dos equipamentos e pela integração entre hardware e software de maneira funcional.
 
-A área \textbf{Sistemas Mecânicos} é responsável pelo desenvolvimento, fabricação de modelos físicos, usinagem das peças, além da manutenção do robô como um todo. 
+\subsection{Sistema Mecânico}
 
-A área \textbf{Sistemas Eletrônicos} é destinada para a elaboração de todos os projetos da eletrônica embarcada, firmware, garantindo a alimentação, elétrica e segura, do robô e funcionamento dos componentes elétricos, em conjunto da transmissão de informação entre tais componentes e os sistemas computacionais.
+É responsável por realizar toda concepção da estrutura e mecanismos através da modelagem 3D, manufatura de peças, prototipação e manutenção dos projetos. A equipe utiliza e domina softwares CAD de simulação para concepção "virtual", ferramentas como furadeiras, impressoras 3D, esmelhiradeira e entre outras para a manufatura mecânica e também realiza a avaliação e contratação de serviços de usinagem e soldagem. Todas tarefas de prototipagem são realizadas presencialmente no laboratório da ZIMA pelos seus integrantes.
 
-A área \textbf{Sistemas Computacionais} tem como objetivo desenvolver algoritmos de controle, tomadas de decisão, construção de simuladores robóticas, visão computacional, desenvolvimento web e mobile.
+\subsection{Sistema Eletrônico}
 
-Além dessas três áreas de atuação, há uma área não oficial de \textbf{design}, focada em divulgar a equipe e realizar a manutenção das redes sociais. \cite{site_robo_hospitalar21}
+Destinado a concepção dos módulos embarcados, fornecimento de energia, sensoriamento e sistema de tração e para isso utiliza Softwares como Altium Designer e NSIM. Além disso é realizado a soldagem das placas de circuito impresso, cabeamento, manutenção eletrônica e compra e contratação de serviços/equipamentos eletrônicos.
+
+\subsection{Sistema Computacional}
+
+Encarregado desenvolver, simular e validar todo software usado nos microcontroladores ou computadores embarcados. Para isso, o dominio de ferramentas de versionamento como Git e GitHub são amplamente utilizados pela equiepe[FOTO] bem como as linguagens C++, Python e frameWorks de simulação como ROS, Rviz e Gazebo[FOTO]. Além de embarcados e simulações, sistemas de interação com usuario também são feitos pela computação[FOTO]. Mais recentemente, a equipe adicionou a área de Desenvolvimento Web e Mobile, responsável pela criação e manutenção do site da zimausp.org[LINK] e do aplicatovo do Hema Bot.
+
 
 \begin{figure}[h]
 \centering
@@ -44,7 +49,7 @@ Por mais que cada placa tenha seu código único, muitas funções e bibliotecas
 
 \section{Software}
 
-A área de computação da equipe, foi sem dúvidas a que mais se desenvolveu nos últimos seis meses. Na primeira versão do robô Hospitalar somente uma pessoa trabalhava, em contrapartida, na segunda versão três pessoas trabalham no software do robô, sendo duas delas inclusivamente para isso. De maneira geral, a confecção do software do robô hospitalar é dividida em cinco grandes frentes: Simulação, Algoritmos de Controle, Integração de Componentes, Visão Computacional e Desenvolvimento web e mobile.
+A área de computação da equipe, foi sem dúvidas a que mais se desenvolveu nos últimos seis meses. Na primeira versão do robô Hospitalar somente uma pessoa trabalhava, em contrapartida, na segunda versão três pessoas trabalham no software do robô, sendo duas delas inclusivamente para isso. De maneira geral, a confecção do software do robô hospitalar é dividida em cinco grandes frentes: Simulação, Algoritmos de Controle, Integração de Componentes, Visão Computacional e Desenvolvimento Web e  e mobile.
 
 A área de \textbf{Simulação}, feita com gazebo \cite{gazebo21} sem dúvida a melhor desenvolvida e consolidada nos últimos seis meses, que já foi quase que concluída, foi subdividida em três grandes problemas: modelo simplificado do robô, universo de simulação e Implementação de sensores. Esses três problemas já foram devidamente desenvolvidos e hoje em dia sofrem poucas alterações.
 
