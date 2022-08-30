@@ -65,8 +65,6 @@
 %	\assinatura{Prof.\ Z}
 %\end{folhadeaprovacao}
 
-% ========== Ficha catalográfica ==========
-\includepdf{ficha_catalografica.pdf}
 
 % ========== Dedicatória (opcional) ==========
 \dedicatoria{Dedico esse trabalho aos atuais e futuros integrantes da ZIMA - Soluções Medico Hospitalares}
@@ -113,7 +111,6 @@ Abstract...
 \end{comment}
 % ========== Listas (opcional) ==========
 \listadefiguras
-\listadetabelas
 
 % ========== Sumário ==========
 \sumario
@@ -134,48 +131,168 @@ Abstract...
 
 % ========== Parte 2: Golgi Bot ==========
 \part{Golgi Bot} 
+O diagrama abaixo divide o equipamento em subsistemas, cada um com determinada função e aplicações mecânicas, eletrônicas ou computacionais.
 
-\subfile{chapters/distribuicao_de_energia}
+\begin{figure}[h]
+	\centering
+		\caption{Diagrama Projeto Golgi Bot}
+		\centering % para centralizarmos a figura
+		\includegraphics[width=17cm]{docs/golgi_bot_general_diagram.pdf}
+		\caption*{Fonte: Autor}
+		\label{figura:Diagrama Projeto Golgi Bot}
+	\end{figure}
+	
+\subfile{chapters/hardware_golgi}
 
-\subfile{chapters/modulos_embarcados}
+\subfile{chapters/software_golgi}
 
 % ========== Parte 3: Ciclo Êrgometro  ==========
 \part{Ciclo Êrgometro} 
+O diagrama abaixo divide o equipamento em subsistemas, cada um com determinada função e aplicações mecânicas, eletrônicas ou computacionais.
 
-\subfile{chapters/distribuicao_de_energia}
+\begin{figure}[h]
+	\centering
+		\caption{Diagrama Projeto Ciclo}
+		\centering % para centralizarmos a figura
+		\includegraphics[width=17cm]{images/Diagrama ciclo.pdf}
+		\caption*{Fonte: Autor}
+		\label{figura:Diagrama Projeto Ciclo}
+	\end{figure}
+\subfile{chapters/hardware_ciclo}
 
-\subfile{chapters/modulos_embarcados}
+\subfile{chapters/software_ciclo}
 
 % ========== Parte 4: Hema bot ==========
 \part{Hema Bot} 
 
-\subfile{chapters/distribuicao_de_energia}
-
-\subfile{chapters/modulos_embarcados}
+\subfile{chapters/v3}
 
 % ========== Parte 5: Zima ==========
 \part{ZIMA} 
 
-\subfile{chapters/distribuicao_de_energia}
 
-\subfile{chapters/modulos_embarcados}
-
+\subfile{chapters/estrutura_zima}
 
 \begin{comment} % se sobrar tempo comentar
 
 
-\subfile{chapters/desenvolvimento_web_mobile}
 \end{comment}
 
 % ========== Parte 4: Software ==========
 \part{Resultados}
 
-No âmbito da computação e da eletrônica, o software e hardware, que andam muito próximos um do outro, os resultados foram satisfatórios, mas nada além disso. Foi bastante trabalho em pouco tempo, porém, não foram realizados tantos testes quanto foi idealizado por conta de períodos sem poder frequentar a USP.
+No projeto Golgi Bot, Automação da Farmácia do HU, foram frabricados o primeiro mini prototipo funcional o qual foi capaz de capturar remedios e se movimentar como esperado. Os sistemas eletronicos e modulos embarcados foram fabricados e atualmente se encontramos na versão em escala real que a movimentação esta sendo testada para iniciar os teste de captura.Além disso, foram realizadas diversas reuniões com os coolaboradores do HU em função do software que já possui versão funcional mas segue em melhorias
 
-No que diz respeito ao Hardware, os módulos oficiais ainda não foram fabricados, pois é necessário revisar melhor os esquemáticos e testar todos os protótipos por completo para mandar fazer. Porém, levando em consideração que quase toda a reestruturação do projeto tem pouco menos de 8 meses, e poucos mais de 10 placas de circuito impresso foram sintetizadas, ainda é um bom resultado.
+\begin{figure}[h]
+\centering
+    \begin{minipage}{0.5\textwidth}
+       \centering
+        \caption{Modulo movimentação Golgi}
+        \centering % para centralizarmos a figura
+        \includegraphics[width=4cm]{images/modulo_golgi.jpeg}
+        \caption*{Fonte: Autor}
+        \label{figura: Modulo movimentação Golgi}
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \caption{Reunião Farmácia (HU)}
+        \centering % para centralizarmos a figura
+        \includegraphics[width=9cm]{images/reuni_golgi.jpg}
+        \caption*{Fonte: Autor}
+        \label{figura: Reunião Farmácia (HU)}
+    \end{minipage}\hfill
+\end{figure}
+\begin{figure}[h]
+\centering
+    \begin{minipage}{0.5\textwidth}
+       \centering
+        \caption{Golgi Bot miniatura}
+        \centering % para centralizarmos a figura
+        \includegraphics[width=8cm]{images/minigolgi.jpeg}
+        \caption*{Fonte: Autor}
+        \label{figura: Golgi Bot miniatura}
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \caption{Golgi Bot tamanho Real}
+        \centering % para centralizarmos a figura
+        \includegraphics[width=5cm]{images/gigagolgi.png}
+        \caption*{Fonte: Autor}
+        \label{figura: Golgi Bot tamanho Real}
+    \end{minipage}\hfill
+\end{figure}
 
-No que diz respeito ao Software, em pouco menos de 6 meses, todo o ambiente de simulação e algoritmos de controle foram produzidos. Por mais que o código da primeira versão fosse funcional, muito pouco era reaproveitável pela falta de organização e documentação de tudo desenvolvido. Por conta disso, tudo foi refeito. Contudo, tiveram-se muitos resultados produzidos e garantia de um código que pode ser repassado para futuras gerações de membros do projeto.
+Para o ciclo ergometro foi frabricado toda primeira versão com o modo manual e automático. O equipamento foi completamente montado e testado com mais de 20 voluntários da escola politécnica. Os resultados dos testes comprovaram a ergonomia do equipamento mas ressaltaram pontos que estão sendo corrigidos na segunda versão do cicloergometro. Para garantir o bom andamento do projeto foram feitos acompanhamentos quinzenais com a Dra Alexandra Siqueira e Prof. Oswaldo Horikawa.
 
+\begin{figure}[h]
+\centering
+    \begin{minipage}{0.5\textwidth}
+       \centering
+        \caption{Teste Ciclo Ergômetro}
+        \centering % para centralizarmos a figura
+        \includegraphics[width=7cm]{images/teste_ciclo.jpeg}
+        \caption*{Fonte: Autor}
+        \label{figura: Teste Ciclo Ergômetro}
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \caption{Reunião UTI Adulto}
+        \centering % para centralizarmos a figura
+        \includegraphics[width=9cm]{images/reuni_ciclo.jpeg}
+        \caption*{Fonte: Autor}
+        \label{figura: Reunião UTI Adulto}
+    \end{minipage}\hfill
+\end{figure}
+
+
+A 3ª versão do robô hospitalar Hema bot, foi concepcionada no CAD e fabricada com PLA no próprio laboratorio. Para isso foi realizado a compra de uma impressora 3D de 30x30x40cm de volume útil. Além disso foi feito a soldagem da nova placa embarcada e realizado os testes de suas funcionalidades.
+
+\begin{figure}[h]
+\centering
+    \begin{minipage}{0.5\textwidth}
+       \centering
+        \caption{Fabricação Hema Bot}
+        \centering % para centralizarmos a figura
+        \includegraphics[width=9cm]{images/fabrica_hema.png}
+        \caption*{Fonte: Autor}
+        \label{figura: Fabricação Hema Bot}
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \caption{Hema Bot Real}
+        \centering % para centralizarmos a figura
+        \includegraphics[width=4cm]{images/hemabotreal.jpeg}
+        \caption*{Fonte: Autor}
+        \label{figura: Hema Bot Real}
+    \end{minipage}\hfill
+\end{figure}
+
+Já em termos de grupo de extesão, o grupo cresceu para 25 membros ativos e se inseriu na comunidade usp atraves de diversas apariçoes para os novos ingressantes como na semana de extesão, PET mecatrônica e semana de recepção. Foi realizada toda estruturação de cargos assim como um processo seletivo para os futuros ingressantes.Além disso, outros 3 novos projetos foram adicionados ao Leque do grupo, um andadaro, um ciclo ergometro de membro superior e um dispensador de remédios controlados.O ultimo e mais marcante acontecimento foi a oportunidade do grupo de expor todos os projetos no Hospital Universitário da USP, neste evento os todos coolaboradores do HU tiveram contato direto com os projetos e suas motivações.
+
+\begin{figure}[h]
+\centering
+    \caption{Evento HU 20/04/2022}
+    \begin{minipage}{0.5\textwidth}
+       \centering
+        
+        \centering % para centralizarmos a figura
+        \includegraphics[width=7cm]{images/evento_hu.jpg}
+        
+        \label{figura: Apresentação HU}
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \centering % para centralizarmos a figura
+        \includegraphics[width=7cm]{images/evento_hu2.jpg}
+        \label{figura: Equipe Evento HU}
+    \end{minipage}\hfill
+    \caption*{Fonte: Autor}
+\end{figure}
 
 % ========== TITULOS DO SUMÁRIOS ==========
 %\blinddocument
@@ -187,13 +304,7 @@ No que diz respeito ao Software, em pouco menos de 6 meses, todo o ambiente de s
 \bibliographystyle{abntex2-num}
 \bibliography{bibliography}
 
-% ========== Apêndices (opcional) ==========
-\apendice
-\subfile{chapters/visao_computacional}
 
-% ========== Anexos (opcional) ==========
-\anexo
-\subfile{chapters/anexos}
 
 
 \end{document}
